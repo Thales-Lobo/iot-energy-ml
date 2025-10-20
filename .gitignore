@@ -1,0 +1,101 @@
+# ========================
+# Python artifacts
+# ========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+*.pyd
+*.pyc
+
+# ========================
+# Virtual environments
+# ========================
+venv/
+.venv/
+.envrc
+
+# ========================
+# Logs and temporary files
+# ========================
+*.log
+*.tmp
+*.swp
+*.swo
+*.bak
+
+# ========================
+# OS-specific files
+# ========================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ========================
+# IDE / Editor files
+# ========================
+# VSCode
+.vscode/
+.history/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# ========================
+# Data files and outputs
+# ========================
+# Central metrics / results
+central/data/
+central/results.csv
+
+# Simulator datasets
+simulator/seeded_datasets/
+
+# ========================
+# Build / Distribution
+# ========================
+*.egg-info/
+dist/
+build/
+*.whl
+
+# ========================
+# Docker
+# ========================
+# Ignore images, containers, volumes metadata
+*.pid
+*.log
+*.env
+*.dockerignore
+docker-compose.override.yml
+*.tar
+
+# ========================
+# Python compiled caches for packages
+# ========================
+pip-wheel-metadata/
+__pypackages__/
+
+# ========================
+# Temporary test or debug files
+# ========================
+*.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+htmlcov/
+.tox/
+noxfile.py
+pytest_cache/
+.pytest_cache/
