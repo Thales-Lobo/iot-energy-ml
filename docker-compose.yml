@@ -1,0 +1,32 @@
+services:
+  central:
+    build: ./central
+    container_name: iot-central
+    ports:
+      - "8000:8000"
+    environment:
+      - MODEL_PATH=/app/model/model.h5
+      - SCALER_PATH=/app/model/scaler.pkl
+      - METRICS_CSV_PATH=/app/data/results.csv
+    volumes:
+      - ./central/data:/app/data
+      - ./central/model:/app/model
+    networks:
+      - iot-net
+
+  simulator:
+    build: ./simulator
+    container_name: iot-simulator
+    depends_on:
+      - central
+    environment:
+      - CENTRAL_HOST=http://central:8000
+      - NUM_NODES=10
+      - MIN_DELAY=0
+      - MAX_DELAY=60
+    networks:
+      - iot-net
+
+networks:
+  iot-net:
+    driver: bridge
