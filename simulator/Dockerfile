@@ -2,10 +2,10 @@
 FROM python:3.11-slim
 
 # Set working directory inside container
-WORKDIR /simulator
+WORKDIR /sim
 
 # Copy simulator code
-COPY . .
+COPY sim/ ./sim/
 
 # Install Python dependencies from sim/requirements.txt
 RUN pip install --no-cache-dir -r sim/requirements.txt
